@@ -1,5 +1,7 @@
 package com.bridgelabz.EmployeePayrollApp.controller;
 
+import com.bridgelabz.EmployeePayrollApp.service.EmployeeServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,11 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 public class EmployeeController {
+
+    @Autowired
+    private EmployeeServices employeeService;
+
+
     // Get method to get a employee data
     @GetMapping(value = {"", "/", "get"})
     public ResponseEntity<String> getEmployeePayrollData(){

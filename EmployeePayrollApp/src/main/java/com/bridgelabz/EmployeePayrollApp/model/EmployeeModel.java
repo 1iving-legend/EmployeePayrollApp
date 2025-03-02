@@ -20,6 +20,12 @@ public class EmployeeModel {
         this.salary = employeePayrollDTO.getSalary();
     }
 
+    public EmployeeModel( String name, int salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+
     // Getters and Setters
     public int getId() {
         return id;
